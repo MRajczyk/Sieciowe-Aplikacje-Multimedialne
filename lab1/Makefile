@@ -1,5 +1,5 @@
-docker_name:=lab1_Mikolaj_Rajczyk_js
-container_name:=lab1_Mikolaj_Rajczyk_container_js
+docker_name:=lab1_mikolaj_rajczyk_js
+container_name:=lab1_mikolaj_rajczyk_container_js
 port:=4080
 docker_build:
 	echo "Prepare docker here..."
@@ -15,3 +15,4 @@ docker_clean:
 	echo "Clean docker here..."
 	-docker container rm $(container_name)
 	docker image rm $(docker_name)
+

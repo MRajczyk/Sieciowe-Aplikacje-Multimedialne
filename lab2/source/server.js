@@ -9,11 +9,16 @@ const app = express()
 app.get('/', (req, res) => {
     const videoUrl = req.query.videoFile;
 	const audioUrl = req.query.audioFile;
+	const imgUrl = req.query.imgFile;
 
 	output = "";
 
 	if(videoUrl === undefined) {
 		output += `<h1>Hello World Player</h1>`;
+    }
+	
+	if(imgUrl !== undefined) {
+		output += `<img width=\"200\" height=\"200\" id=\"posterImage\" src=${imgUrl} alt="img"></img><br>`;
     }
 
 	if(videoUrl !== undefined) {

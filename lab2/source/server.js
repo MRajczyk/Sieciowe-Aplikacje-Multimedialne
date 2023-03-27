@@ -37,6 +37,14 @@ app.get('/', (req, res) => {
 
     if(audioUrl !== undefined) {
 		output += `<button id="audioCancel" onclick="changeAudioSource()">audioCancel</button>`;
+		output += `
+			<script>
+				function changeAudioSource () {
+					let element = document.getElementById("audioPlayer");
+					element.src = "cancel.mp3";
+				}
+			</script>
+		`;
 	}
 
     res.set('Content-Type', 'text/html', 'charset', 'utf-8');

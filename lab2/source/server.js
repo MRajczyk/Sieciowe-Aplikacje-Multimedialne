@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     
 
     if(audioUrl !== undefined) {
-		output += (`<audio width=\"320\" height=\"240\" id=\"audioPlayer\" controls><source src=${audioUrl}>You can't run audio tag</audio>`);
+		output += `<button id="audioCancel" onclick="changeAudioSource()">audioCancel</button>`;
 	}
 
     res.set('Content-Type', 'text/html', 'charset', 'utf-8');

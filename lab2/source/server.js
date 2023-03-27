@@ -23,6 +23,7 @@ app.get('/', (req, res) => {
 
 	if(videoUrl !== undefined) {
 		output += (`<video width=\"320\" height=\"240\" id=\"videoPlayer\" controls><source src=${videoUrl}>You can't run video tag</video>`);
+		output += `<button id="videoCancel" onclick="changeVideoSource()">videoCancel</button><br>`;
 	}
     
 
